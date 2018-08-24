@@ -23,6 +23,11 @@ export default class InitialScreen extends Component<{}, State> {
           title="Reset as second screen"
           onPress={() => Actions.secondScreen({type: ActionConst.RESET})}
         />
+
+        <Button
+          title="Show lightbox dialog"
+          onPress={() => Actions.dialog()}
+        />
       </View>
     );
   }

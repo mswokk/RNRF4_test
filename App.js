@@ -5,25 +5,33 @@
  */
 
 import React from 'react';
-import {Router, Scene} from 'react-native-router-flux';
+import {Lightbox, Router, Scene} from 'react-native-router-flux';
 import SecondScreen from './SecondScreen';
 import InitialScreen from './InitialScreen';
+import Dialog from './Dialog';
 
 export default function AppContainer() {
   return (
     <Router>
-      <Scene hideNavBar>
-        <Scene
-          initial
-          key="initialScreen"
-          component={InitialScreen}
-        />
+      <Lightbox>
+        <Scene hideNavBar>
+          <Scene
+            initial
+            key="initialScreen"
+            component={InitialScreen}
+          />
+
+          <Scene
+            key="secondScreen"
+            component={SecondScreen}
+          />
+        </Scene>
 
         <Scene
-          key="secondScreen"
-          component={SecondScreen}
+          key="dialog"
+          component={Dialog}
         />
-      </Scene>
+      </Lightbox>
     </Router>
   );
 }
