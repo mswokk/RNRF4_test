@@ -20,8 +20,13 @@ export default class InitialScreen extends Component<{}, State> {
         />
 
         <Button
-          title="Reset as second screen"
+          title="Reset to second screen"
           onPress={() => Actions.secondScreen({type: ActionConst.RESET})}
+        />
+
+        <Button
+          title="Replace with second screen"
+          onPress={() => Actions.secondScreen({type: ActionConst.REPLACE})}
         />
 
         <Button

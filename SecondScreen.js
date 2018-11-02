@@ -5,17 +5,22 @@
  */
 import React from 'react';
 import {Button, Text, View} from 'react-native';
-import {Actions} from 'react-native-router-flux';
+import {Actions, ActionConst} from 'react-native-router-flux';
 
 export default () => {
   return (
     <View>
       <Text>Second screen</Text>
       <Button
-        title="Push secondScreen"
+        title="Push secondScreen again"
         onPress={() => {
           Actions.secondScreen();
         }}
+      />
+
+      <Button
+        title="Reset to InitialScreen"
+        onPress={() => Actions.initialScreen({type: ActionConst.RESET})}
       />
     </View>
   );
