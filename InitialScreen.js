@@ -28,6 +28,11 @@ export default class InitialScreen extends Component<{}, State> {
           title="Show lightbox dialog"
           onPress={() => Actions.dialog()}
         />
+
+        <Button
+          title="Exit"
+          onPress={() => Actions.pop()}
+        />
       </View>
     );
   }
